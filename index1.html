@@ -28,11 +28,11 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js">
 $("#btnSubmit").click(function() {
     $("#sendmail").validate();
-
+   <form id="contact-form">
     if ($("#sendmail").valid()) {
         $.ajax({
             type: "POST",
-            url: "https://gurwinder89.github.io/gurwinder/89sgurwinder@gmail.com",
+            url: "https://formspree.io/89sgurwinder@gmail.com",
             cache: false,
             contentType: "application/json; charset=utf-8",
             data: "{ 'body': '" + $("#txtMessage").val() + "'," + "'from': '" + $("#inputEmail").val() + "'," + "'subject: 'email from" + $("#inputName").val() + "'" + "}",
