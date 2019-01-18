@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Civic - CV Resume</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Civic - CV Resume">
+	<meta name="keywords" content="resume, civic, onepage, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	
+<script src="http://code.jquery.com/jquery-1.11.1.min.js">
+  $(document).ready(function(){
+    $("#commentForm").validate();
+  });
+</script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js">
+$("#btnSubmit").click(function() {
+    $("#sendmail").validate();
+
+    if ($("#sendmail").valid()) {
+        $.ajax({
+            type: "POST",
+            url: "https://gurwinder89.github.io/gurwinder/89sgurwinder@gmail.com",
+            cache: false,
+            contentType: "application/json; charset=utf-8",
+            data: "{ 'body': '" + $("#txtMessage").val() + "'," + "'from': '" + $("#inputEmail").val() + "'," + "'subject: 'email from" + $("#inputName").val() + "'" + "}",
+            dataType: "json",
+            complete: function(transport) {
+                alert(transport.status);
+                if (transport.status == 200) {
+                    $("#formcontainer").html("<h1>Success</h1>");
+                }
+                else {
+                    alert("Please try again later");
+                }
+            }
+        });
+    }
+
+
+    //so that the page doesn't post back
+    return false;
+});
+</script>
+
+	
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+	
+	<!-- Header section start -->
+	<header class="header-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="site-logo">
+						
+					</div>
+				</div>
+				<div class="col-md-8 text-md-right header-buttons">
+
+					<a href="Resume.pdf">Download Resume</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+	<!-- Hero section start -->
+	<section class="hero-section spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hero-text">
+								<h2>Gurwinder Singh</h2>
+								<p>I am an Optical Physicist. I love reading and learning new technologies .</p>
+							</div>
+							<div class="hero-info">
+								<h2>General Info</h2>
+								<ul>
+									<li><span>Date of Birth</span>June 23, 1989</li>
+									<li><span>Address</span>11000 Diploma Dr,Charlotte,USA</li>
+									<li><span>E-mail</span>89sgurwinder@gmail.com</li>
+									<li><span>Phone </span>+1 (704) 497-7187</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<figure>  
+								<img height="400px" width="400px"src="img/Gurwinder.jpg" alt="5">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+	<!-- Social links section start -->
+	<div class="social-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="social-link-warp">
+						<div class="social-links">
+							
+							<a href="https://www.linkedin.com/in/gurwinder-singh1313/"><i class="fa fa-linkedin"></i></a>
+							
+						</div>
+						<h2 class="hidden-md hidden-sm">My Social Profiles</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- Social links section end -->
+
+	<!-- Resume section start -->
+	<section class="resume-section spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-7 offset-xl-2">
+					<div class="section-title">
+						<h2>Work Experience</h2>
+					</div>
+					<ul class="resume-list">
+						<li>
+							<h2>2017-2018</h2>
+							<h3>University of North Carolina, Charlotte</h3>
+							<h4>Graduate Teaching/Research Assistant</h4>
+							<p>Conducted a lab on Experimental techniques and fundamental principles of Physical phenomena and teaching Undergraduates basic Introductory Physics Courses and led problem solving sessions for algebra and calculus-based mechanics (PHYS 2101) and electricity and magnetism (PHYS 2102). In addition, proctoring, grading exams and weekly quizzes of undergraduate Physics Classes. </p>
+						</li>
+						<li>
+							<h2>2012-2016</h2>
+							<h3>Panjab University, Chandigarh, India</h3>
+							<h4>Assistant Professor in Physics</h4>
+							<p>Responsible for taking Theoretical and Laboratory sessions for Bachelors of Science Physics Courses like Optics, Laser Physics, Semiconductor Physics. Active member in Career Guidance and Counselling cell and Placement cell.Develop and implement innovative instructional methods.Develop professional logistics to improvise student performance.Assess, review and evaluate student activities and progress.   </p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Resume section end -->
+
+	<!-- Resume section start -->
+	<section class="resume-section with-bg spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-7 offset-xl-2">
+					<div class="section-title">
+						<h2>Education</h2>
+					</div>
+					<ul class="resume-list">
+						<li>
+							<h2>2017-2018</h2>
+							<h3>MS, Optical Science and Engineering</h3>
+							<h4>University of North Carolina, Charlotte, USA</h4>
+							<p>The purpose of the program is to educate scientists and engineers who will develop the next generation of optical technology.Optical engineers design components of optical instruments such as lenses, microscopes, telescopes, and other equipment that utilizes the properties of light.  </p>
+						</li>
+						<li>
+							<h2>2011-2012</h2>
+							<h3>Bachelors in Education</h3>
+							<h4>Panjab University, Chandigarh, India</h4>
+							<p>A Bachelor's degree in Education can lead to a rewarding career teaching early childhood, elementary, middle or secondary school education. I was  specialized by focusing on Physical Science and Mathematics Subject. </p>
+						<li>
+						<li>
+							<h2>2009-2011</h2>
+							<h3>M.Sc Astronomy and Space Physics</h3>
+							<h4>Punjabi University, Patiala, India</h4>
+							<p>A degree focussed in Astronomy and Space Physics deals with the physics that helps to understand the nature of the Universe and applies many disciplines of physics, including mechanics, electromagnetism, statistical mechanics, thermodynamics, quantum mechanics, relativity, nuclear and particle physics, and atomic and molecular physics. </p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Resume section end -->
+
+	
+	<!-- Review section start -->
+	<section class="review-section spad pb-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-7 offset-xl-2">
+					<div class="section-title">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Review section end -->
+                                                    
+                                         <!-- Resume section start -->
+	                            <section class="resume-section spad">
+	 	                      <div class="container-fluid">
+		 	                      <div class="row">
+				            <div class="col-xl-7 offset-xl-2">
+					   <div class="section-title">
+
+                                                         
+								<h2>Skills</h2>
+							     
+						
+							    <!-- progress bars -->
+							    <div class="skills">
+								<div class="single-progress-item">
+									<div class="progress-bar-style" data-progress="90"></div>
+									<p>Zemax</p>
+								</div>
+								<div class="single-progress-item">
+									<div class="progress-bar-style" data-progress="85"></div>
+									<p>LightTrans Virtual Lab</p>
+								</div>
+								<div class="single-progress-item">
+									<div class="progress-bar-style" data-progress="80"></div>
+									<p>Matlab</p>
+								</div>
+								<div class="single-progress-item">
+									<div class="progress-bar-style" data-progress="60"></div>
+									<p>Python/C</p>
+								</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Review section end -->
+
+
+	<!-- Portfolio section start -->
+	<section class="portfolio-section spad pb-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-7 offset-xl-2 ">
+					<div class="section-title">
+
+
+						<h2>Projects</h2>
+					</div>
+				<div class="row">
+					<div class="col-xl-6 col-lg-8 col-md-8">
+						<div class="portfolio-item">
+							<a href="img/portfolio/5.jpg" class="set-bg port-pic" data-setbg="img/portfolio/5.jpg"></a>
+
+							<h2>Zemax</h2>
+							<p>Telescopic Lens</p>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-8 col-md-8">
+						<div class="portfolio-item">
+							<a href="img/portfolio/6.jpg" class="set-bg port-pic" data-setbg="img/portfolio/6.jpg"></a>
+							<h2>LightTrans Virtual Lab</h2>
+							<p>Guided Mode Resonance Filters</p>
+						</div>
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Portfolio section end -->
+
+	<!-- Extra section start -->
+	<section class="extra-section spad pb-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-8 offset-xl-2">
+					<div class="section-title">
+						<h2>Extra Skills</h2>
+					
+					
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="fact-box">
+								<div class="fact-content">
+									<img src="img/icon/1-w.png" alt="">
+									<h2>4</h2>
+							<p>Years of Organisational Experience</p>
+								
+							</div>
+                                                        <div class="col-lg-3 col-md-6">
+							<div class="fact-box">
+								<div class="fact-content">
+									<img src="img/icon/1-w.png" alt="">
+									<h2>1</h2>
+									<p>Year Optical Designing Experience</p>
+								</div>
+						
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Extra section end -->
+
+	<!-- Contact section start -->
+	<section class="contact-section spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-8 offset-xl-2">
+					<div class="section-title">
+						<h2>Contact Me</h2>
+					</div>
+	</div>
+			</div>
+		</div>
+	</section>
+	
+	<form id="sendmail" method="POST" action="">
+    <div id="formcontainer">
+        <div id="formname">
+            <label for="inputName">
+                Name</label><input type="text" id="inputName" name="Name" value="" class="required" />
+        </div>
+        <div id="formemail">
+            <label for="inputEmail">
+                E-mail</label><input class="required email"  type="text" id="inputEmail" name="Email" value="" />
+        </div>
+  
+        <div id="formmsg">
+            <label for="inputMessage">
+                Your Message</label><textarea id="txtMessage" name="Message" class="required"></textarea>
+        </div>
+        <div class="submit">
+            <input type="submit"
+                id="btnSubmit" text="Send" class="submit" />
+        </div>
+    </div>
+    </form>
+	
+
+		
+				
+	<!-- Contact section end -->
+
+	<!-- Footer section start -->
+	<footer class="footer-section">
+		<div class="container text-center">
+			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+	
+</body>
+</html>
