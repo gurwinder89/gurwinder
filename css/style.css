@@ -8,6 +8,22 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
+
+
+.display-none {
+  display: none;
+}
+.fill {
+  display: block;
+  width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+
+
+
+
 html,
 body {
 	height: 100%;

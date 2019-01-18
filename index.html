@@ -294,29 +294,26 @@
 					<div class="section-title">
 						<h2>Contact Me</h2>
 					</div>
-					<!--
-					<form class="contact-form" method="post" action="">
-						<div class="row">
-							<div class="col-md-6">
-								<input type="text" placeholder="Name">
-							</div>
-							<div class="col-md-6">
-								<input type="text" placeholder="E-mail" required>
-							</div>
-							<div class="col-md-12">
-								<input type="text" placeholder="Subject">
-								<textarea placeholder="Message"></textarea>
-							</div>
-						</div>
-						<div class="text-md-right">
-							<button class="site-btn" value="Send Email" onclick="send()">Send message</button>
-						</div>
-					</form>
-					-->
-					<form method="post" action="">
-    <input type="text" id="email" name="name" required>
-    <input type="button" value="Send Email" onclick="send()/>
-</form>
+					<div class="grid">
+					<div class="grid__col--12">
+	
+<div class="grid">
+  <div class="grid__col--12">
+    <form id="contact-form">
+      <label for="inputName">Name</label>
+      <input class="form__input" id="inputName" type="text" placeholder="Name" name="name"/>
+      <label for="inputEmail">Email</label>
+      <input class="form__input" id="inputEmail" type="email" placeholder="Email" name="email"/>
+      <label for="inputMessage">Message</label>
+      <textarea class="form__input" id="inputMessage" rows="3" placeholder="Your Message" name="message"></textarea>
+      <input class="display-none" type="text" name="_gotcha"/>
+      <input class="btn--default fill" id="email-submit-btn" type="submit" value="Send"/>
+    </form>
+  </div>
+</div>
+  </div>
+</div>
+		
 				</div>
 			</div>
 		</div>
@@ -337,12 +334,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	<!--====== Javascripts & Jquery ======-->
 	<script type="text/javascript">
-  function send() {
-    var link = 'mailto:email@example.com?subject=Message from '
-             +document.getElementById('email').value
-             +'&body='+document.getElementById('email').value;
-    window.location.href = link;
-}
+  (function() {
+  $(document).ready(function() {
+    return $('#contact-form').submit(function(e) {
+      var email, message, name;
+      name = document.getElementById('inputName');
+      email = document.getElementById('inputEmail');
+      message = document.getElementById('inputMessage');
+      if (!name.value || !email.value || !message.value) {
+        alertify.error('Please check your entries');
+        return false;
+      } else {
+        $.ajax({
+          method: 'POST',
+          url: 'https://gurwinder89.github.io/gurwinder/89sgurwinder@gmail',
+          data: $('#contact-form').serialize(),
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        return alertify.success('Message sent');
+      }
+    });
+  });
+
+}).call(this);
 </script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
